@@ -8,6 +8,7 @@ class DemoControllerSpec extends Specification {
 
     void "test something"() {
         when:
+        request.method = 'POST'
         params.version = '4'
         params.name = 'Jeff'
         def model = controller.generate()

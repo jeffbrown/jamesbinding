@@ -4,6 +4,8 @@ import grails.validation.Validateable
 
 class DemoController {
 
+    static allowedMethods = [generate: 'POST']
+
     def generate(ProjectMetaDataCommand co) {
         [command: co]
     }
